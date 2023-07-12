@@ -1,0 +1,35 @@
+version: "3.1"
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: adrian
+      POSTGRES_PASSWORD: agd2023
+      POSTGRES_DB: corserva
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    networks:
+      - corserva-network
+
+  api:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 3001:3001
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: corserva
+      DB_USER: adrian
+      DB_PASSWORD: agd2023
+      NODE_ENV: production
+    networks:
+      - corserva-network
+
+networks:
+  corserva-network:

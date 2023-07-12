@@ -1,0 +1,38 @@
+{
+  "development": {
+    "username": "adrian",
+    "password": "agd2023",
+    "database": "corserva",
+    "host": "localhost",
+    "dialect": "postgres",
+    "models": [
+      "models/item.model.js",
+      "models/order.model.js",
+      "models/saleOrderItem.model.js"
+    ]
+  },
+  "test": {
+    "username": "adrian",
+    "password": "agd2023",
+    "database": "corserva_test",
+    "host": "localhost",
+    "dialect": "postgres",
+    "models": [
+      "models/item.model.js",
+      "models/order.model.js",
+      "models/saleOrderItem.model.js"
+    ]
+  },
+  "production": {
+    "username": "adrian",
+    "password": "agd2023",
+    "database": "corserva",
+    "host": "localhost",
+    "dialect": "postgres",
+    "models": [
+      "models/item.model.js",
+      "models/order.model.js",
+      "models/saleOrderItem.model.js"
+    ]
+  }
+}
