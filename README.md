@@ -18,4 +18,4 @@ Runs automated API tests.\
 Builds the app for production to the `dist` folder.\
 
 ## Postman
-The file [CRUDSales.postman_collection.json] contains the CRUD endpoints for manual testing.
+The file `CRUDSales.postman_collection.json` contains the CRUD endpoints for manual testing.
